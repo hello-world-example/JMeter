@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mermaid Chart  Mermaid is library for generating svg charts and diagrams from text.
+Example {{&lt; mermaid [class=&#34;text-center&#34;]&gt;}} sequenceDiagram Alice-&gt;&gt;Bob: Hello Bob, how are you? alt is sick Bob-&gt;&gt;Alice: Not so good :( else is well Bob-&gt;&gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-&gt;&gt;Alice: Thanks for asking end {{&lt; /mermaid &gt;}}    sequenceDiagram Alice-Bob: Hello Bob, how are you? alt is sick Bob-Alice: Not so good :( else is well Bob-Alice: Feeling fresh like a daisy end opt Extra response Bob-Alice: Thanks for asking end   "><meta property="og:title" content="" />
+<meta property="og:description" content="Mermaid Chart  Mermaid is library for generating svg charts and diagrams from text.
+Example {{&lt; mermaid [class=&#34;text-center&#34;]&gt;}} sequenceDiagram Alice-&gt;&gt;Bob: Hello Bob, how are you? alt is sick Bob-&gt;&gt;Alice: Not so good :( else is well Bob-&gt;&gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-&gt;&gt;Alice: Thanks for asking end {{&lt; /mermaid &gt;}}    sequenceDiagram Alice-Bob: Hello Bob, how are you? alt is sick Bob-Alice: Not so good :( else is well Bob-Alice: Feeling fresh like a daisy end opt Extra response Bob-Alice: Thanks for asking end   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/mermaid/" />
+<meta property="article:modified_time" content="2020-04-06T00:10:07+08:00" />
+<title>Mermaid | Template-Hugo</title>
+<link rel="icon" href="/Template-Hugo/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/Template-Hugo/book.min.d436f463c9471cfab26a8b71cd2f50b6abf5225806391453da4ca111d1834fef.css" integrity="sha256-1Db0Y8lHHPqyaotxzS9Qtqv1IlgGORRT2kyhEdGDT&#43;8=">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/Template-Hugo"><span>Template-Hugo</span>
+  </a>
+</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/example/"><strong>Example Site</strong></a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/example/table-of-contents/">Table of Contents</a></p>
+<ul>
+<li>
+  <a href="/Template-Hugo/docs/example/table-of-contents/with-toc/">With ToC</a></li>
+<li>
+  <a href="/Template-Hugo/docs/example/table-of-contents/without-toc/">Without ToC</a></li>
+</ul>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/example/collapsed/">Collapsed</a></p>
+<ul>
+<li>
+  <a href="/Template-Hugo/docs/example/collapsed/3rd-level/">3rd</a>
+<ul>
+<li>
+  <a href="/Template-Hugo/docs/example/collapsed/3rd-level/4th-level/">4th</a>
+<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Shortcodes</strong></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/buttons/">Buttons</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/columns/">Columns</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/expand/">Expand</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/hints/">Hints</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/katex/">Katex</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/mermaid/"class=active>Mermaid</a></p>
+</li>
+<li>
+<p>
+  <a href="/Template-Hugo/docs/shortcodes/tabs/">Tabs</a>
+<br /></p>
+</li>
+</ul>
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/Template-Hugo/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/Template-Hugo/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mermaid</strong>
+
+  <label for="toc-control">
+    <img src="/Template-Hugo/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mermaid-chart">Mermaid Chart</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="mermaid-chart">Mermaid Chart</h1>
+<p>
+  <a href="https://mermaidjs.github.io/">Mermaid</a> is library for generating svg charts and diagrams from text.</p>
+<h2 id="example">Example</h2>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span><span style="color:#f92672">]&gt;</span><span style="color:#75715e">}}</span>
+sequenceDiagram
+    Alice-&gt;&gt;Bob: Hello Bob, how are you?
+    alt is sick
+        Bob-&gt;&gt;Alice: Not so good :(
+    else is well
+        Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob-&gt;&gt;Alice: Thanks for asking
+    end
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <script src="/Template-Hugo/mermaid.min.js"></script>
+<p class="mermaid">
+sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you?
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end
+  </div>
+  
+</div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/hello-world-example/Template-Hugo/commit/f6772dba1537a4d3f6db2a70915c9e1d57cfe688" title='Last modified by 杨凯彬 | Apr 6, 2020' target="_blank" rel="noopener">
+      <img src="/Template-Hugo/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 6, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hello-world-example/Template-Hugo/edit/master/HuGo/content/docs/shortcodes/mermaid.md" target="_blank" rel="noopener">
+      <img src="/Template-Hugo/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mermaid-chart">Mermaid Chart</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

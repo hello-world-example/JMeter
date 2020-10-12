@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://hello-world-example.github.io/Template-Hugo/cn/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hello-world-example.github.io/Template-Hugo/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://hello-world-example.github.io/Template-Hugo/ru/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://hello-world-example.github.io/Template-Hugo/cn/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hello-world-example.github.io/Template-Hugo/cn/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hello-world-example.github.io/Template-Hugo/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://hello-world-example.github.io/Template-Hugo/ru/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://hello-world-example.github.io/Template-Hugo/cn/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hello-world-example.github.io/Template-Hugo/cn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hello-world-example.github.io/Template-Hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://hello-world-example.github.io/Template-Hugo/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://hello-world-example.github.io/Template-Hugo/cn/"
+                />
+  </url>
+  
+</urlset>
