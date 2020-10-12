@@ -3,59 +3,59 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hello-world-example.github.io/Template-Hugo/ru/categories/</loc>
+    <loc>https://hello-world-example.github.io/JMeter/ru/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hello-world-example.github.io/Template-Hugo/categories/"
+                href="https://hello-world-example.github.io/JMeter/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://hello-world-example.github.io/Template-Hugo/cn/categories/"
+                href="https://hello-world-example.github.io/JMeter/cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://hello-world-example.github.io/Template-Hugo/ru/categories/"
+                href="https://hello-world-example.github.io/JMeter/ru/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://hello-world-example.github.io/Template-Hugo/ru/tags/</loc>
+    <loc>https://hello-world-example.github.io/JMeter/ru/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hello-world-example.github.io/Template-Hugo/tags/"
+                href="https://hello-world-example.github.io/JMeter/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://hello-world-example.github.io/Template-Hugo/cn/tags/"
+                href="https://hello-world-example.github.io/JMeter/cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://hello-world-example.github.io/Template-Hugo/ru/tags/"
+                href="https://hello-world-example.github.io/JMeter/ru/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://hello-world-example.github.io/Template-Hugo/ru/</loc>
+    <loc>https://hello-world-example.github.io/JMeter/ru/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hello-world-example.github.io/Template-Hugo/"
+                href="https://hello-world-example.github.io/JMeter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://hello-world-example.github.io/Template-Hugo/cn/"
+                href="https://hello-world-example.github.io/JMeter/cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://hello-world-example.github.io/Template-Hugo/ru/"
+                href="https://hello-world-example.github.io/JMeter/ru/"
                 />
   </url>
   

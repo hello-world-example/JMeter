@@ -1,5 +1,5 @@
-baseURL: https://hello-world-example.github.io/Template-Hugo/
-title: Template-Hugo
+baseURL: https://hello-world-example.github.io/JMeter/
+title: JMeter
 theme: book
 publishDir: '../docs'
 
@@ -45,7 +45,7 @@ params:
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/hello-world-example/Template-Hugo
+  BookRepo: https://github.com/hello-world-example/JMeter
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
