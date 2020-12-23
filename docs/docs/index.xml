@@ -9,5 +9,41 @@
 	<atom:link href="https://hello-world-example.github.io/JMeter/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/</guid>
+      <description>分布式测试 Read More   25. Apache JMeter Distributed Testing Step-by-step  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Basic/Basic-Concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Basic-Concepts/</guid>
+      <description>基础概念 测试分类 测试指标 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Basic/Components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Components/</guid>
+      <description>JMeter 组件 Read More   Component Reference   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Basic/Scope-And-Order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Scope-And-Order/</guid>
+      <description>作用域和顺序 Read More   Jmeter常用组件及作用域  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,41 +1,18 @@
 ---
-title: Introduction
+title: JMeter
 type: docs
 ---
 
-# Acerbo datus maxime
-
-{{< columns >}}
-## Astris ipse furtiva
-
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
-
-<--->
-
-## Suis quot vota
-
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
 
 
-## Tempora nisi nunc
+- **官方资料**
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+  - https://jmeter.apache.org/
+- [User's Manual](https://jmeter.apache.org/usermanual/index.html) : [组件](https://jmeter.apache.org/usermanual/component_reference.html) 、[函数](https://jmeter.apache.org/usermanual/functions.html) 、[属性](https://jmeter.apache.org/usermanual/properties_reference.html) 
+  
+- **相关教程**
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+  - 最佳实践： https://www.cnblogs.com/zhengna/p/9503764.html
+  - JMeter 教程索引贴： https://www.cnblogs.com/puresoul/p/5092628.html
+  
+  
