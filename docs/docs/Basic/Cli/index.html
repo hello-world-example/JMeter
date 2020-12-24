@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JMeter Cli 非 gui 模式运行 $ ./bin/jmeter -n -t [jmx file] -l [results file] -e -o [Path to web report folder] 参数    参数 Mark       -h  使用帮助          -n ❤ 非 GUI 方式运行脚本    -t [jmx file] ❤ jmx 测试计划文件    -l [results file]  测试结果 jtl 文件    -p [conf."><meta property="og:title" content="" />
+<meta property="og:description" content="JMeter Cli 非 gui 模式运行 $ ./bin/jmeter -n -t [jmx file] -l [results file] -e -o [Path to web report folder] 参数    参数 Mark       -h  使用帮助          -n ❤ 非 GUI 方式运行脚本    -t [jmx file] ❤ jmx 测试计划文件    -l [results file]  测试结果 jtl 文件    -p [conf." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Basic/Cli/" />
+
+<title>Cli | JMeter</title>
+<link rel="icon" href="/JMeter/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/JMeter/book.min.d436f463c9471cfab26a8b71cd2f50b6abf5225806391453da4ca111d1834fef.css" integrity="sha256-1Db0Y8lHHPqyaotxzS9Qtqv1IlgGORRT2kyhEdGDT&#43;8=">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/JMeter"><span>JMeter</span>
+  </a>
+</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><strong>Basic</strong>
+<ul>
+<li>
+  <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Components/">JMeter 组件</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Cli/"class=active>Cli</a></li>
+</ul>
+</li>
+<li>
+  <a href="/JMeter/docs/MeterSphere/"><strong>MeterSphere</strong>..</a>
+<ul>
+<li>
+  <a href="/JMeter/docs/MeterSphere/Install/">Docker 方式安装</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/JMeter/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Cli</strong>
+
+  <label for="toc-control">
+    <img src="/JMeter/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jmeter-cli">JMeter Cli</a>
+      <ul>
+        <li><a href="#非-gui-模式运行">非 gui 模式运行</a></li>
+        <li><a href="#参数">参数</a></li>
+        <li><a href="#示例">示例</a></li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="jmeter-cli">JMeter Cli</h1>
+<h2 id="非-gui-模式运行">非 gui 模式运行</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./bin/jmeter -n -t <span style="color:#f92672">[</span>jmx file<span style="color:#f92672">]</span> -l <span style="color:#f92672">[</span>results file<span style="color:#f92672">]</span> -e -o <span style="color:#f92672">[</span>Path to web report folder<span style="color:#f92672">]</span>
+</code></pre></div><h2 id="参数">参数</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">Mark</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-h</code></td>
+<td align="center"></td>
+<td>使用帮助</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td align="center">❤</td>
+<td>非 GUI 方式运行脚本</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-t [jmx file]</code></td>
+<td align="center">❤</td>
+<td>jmx 测试计划文件</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-l [results file]</code></td>
+<td align="center"></td>
+<td>测试结果 jtl 文件</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-p [conf.properties]</code></td>
+<td align="center">❤</td>
+<td>自定义配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td align="center">❤</td>
+<td>测试结束后，生成 HTML 测试报告</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-o [Path to web report folder]</code></td>
+<td align="center"></td>
+<td>HTML 测试报告 的存放位置</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-g [jtl file]</code></td>
+<td align="center"></td>
+<td>根据 jtl 文件生成 HTML 报告</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-j [log file]</code></td>
+<td align="center"></td>
+<td>日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="示例">示例</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./bin/jmeter.sh -h
+
+...
+
+--------------------------------------------------
+
+To run Apache JMeter in GUI mode, open a command prompt and type:
+
+jmeter.bat<span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>/jmeter.sh<span style="color:#f92672">(</span>Linux<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>-p property-file<span style="color:#f92672">]</span>
+
+--------------------------------------------------
+
+To run Apache JMeter in NON_GUI mode:
+
+jmeter.bat<span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>/jmeter.sh<span style="color:#f92672">(</span>Linux<span style="color:#f92672">)</span> -n -t test-file <span style="color:#f92672">[</span>-p property-file<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-l results-file<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-j log-file<span style="color:#f92672">]</span>
+
+--------------------------------------------------
+
+To run Apache JMeter in NON_GUI mode and generate a report at end :
+
+jmeter.bat<span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>/jmeter.sh<span style="color:#f92672">(</span>Linux<span style="color:#f92672">)</span> -n -t test-file <span style="color:#f92672">[</span>-p property-file<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-l results-file<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-j log-file<span style="color:#f92672">]</span> -e -o <span style="color:#f92672">[</span>Path to output folder<span style="color:#f92672">]</span>
+
+--------------------------------------------------
+To generate a Report from existing CSV file:
+
+jmeter.bat<span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>/jmeter.sh<span style="color:#f92672">(</span>Linux<span style="color:#f92672">)</span> -g <span style="color:#f92672">[</span>csv results file<span style="color:#f92672">]</span> -o <span style="color:#f92672">[</span>path to output folder <span style="color:#f92672">(</span>empty or not existing<span style="color:#f92672">)]</span>
+
+--------------------------------------------------
+
+To tell Apache JMeter to use a proxy server:
+
+jmeter.bat<span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>/jmeter.sh<span style="color:#f92672">(</span>Linux<span style="color:#f92672">)</span> -H <span style="color:#f92672">[</span>your.proxy.server<span style="color:#f92672">]</span> -P <span style="color:#f92672">[</span>your proxy server port<span style="color:#f92672">]</span>
+</code></pre></div><h2 id="read-more">Read More</h2>
+<ul>
+<li>
+  <a href="https://jmeter.apache.org/usermanual/get-started.html#running">1.4 Running JMeter</a>
+<ul>
+<li>
+  <a href="https://jmeter.apache.org/usermanual/get-started.html#non_gui">1.4.4 CLI Mode (Command Line mode was called NON GUI mode)</a></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/edit/master/HuGo/content/docs/Basic/Cli.md" target="_blank" rel="noopener">
+      <img src="/JMeter/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jmeter-cli">JMeter Cli</a>
+      <ul>
+        <li><a href="#非-gui-模式运行">非 gui 模式运行</a></li>
+        <li><a href="#参数">参数</a></li>
+        <li><a href="#示例">示例</a></li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,6 +11,22 @@
     
     <item>
       <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/</guid>
+      <description>Bean Shell 内置变量 JMeter 在 BeanShell 中内置了变量，用户可以通过这些变量与 JMeter 进行交互，其中主要的变量及其使用方法如下:
+  log：写入信息到jmeber.log文件，使用方法：log.info(“This is log info!”);
+  ctx：该变量引用了当前线程的上下文，使用方法可参考：org.apache.jmeter.threads.JMeterContext。
+  vars - (JMeterVariables)：操作jmeter变量，这个变量实际引用了JMeter线程中的局部变量容器（本质上是Map），它是测试用例与BeanShell交互的桥梁，常用方法：
+ a) vars.get(String key)：从jmeter中获得变量值 b) vars.put(String key，String value)：数据存到jmeter变量中 参考：org.apache.jmeter.threads.JMeterVariables    props - (JMeterProperties - class java.util.Properties)：操作jmeter属性，该变量引用了JMeter的配置信息，可以获取Jmeter的属性，它的使用方法与vars类似，但是只能put进去String类型的值，而不能是一个对象。对应于java.util.Properties。
+ a) props.get(&amp;ldquo;START.HMS&amp;rdquo;);　注：START.HMS为属性名，在文件jmeter.properties中定义 b) props.put(&amp;ldquo;PROP1&amp;rdquo;,&amp;ldquo;1234&amp;rdquo;);    prev - (SampleResult)：获取前面的sample返回的信息，常用方法：
+ getResponseDataAsString()：获取响应信息 getResponseCode() ：获取响应code 参考：org.apache.jmeter.samplers.SampleResult    sampler - (Sampler)：gives access to the current sampler
+  Read More   Jmeter 之 Bean shell 使用  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -24,7 +40,29 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Basic-Concepts/</guid>
-      <description>基础概念 测试分类 测试指标 </description>
+      <description>基础概念 测试分类 测试指标 测试指标项说明   min、max、avg、last：调用时的最小、最大、平均、最近一次的响应时间（一般平均响应时间不应超过2s）
+  cnt 总调用次数、请求数
+  tps 平均每秒调用次数
+  bytes 接口处理的字符数；
+  bps 平均每秒接口处理的字符数、吞吐率
+  err 报错次数；
+  rat 报错次数/执行次数 错误率
+  具体的测试指标并没有强制的要求。对于不同的业务服务有不同的指标要求。单对于错误率要特别注意。
+测试策略 Simple Strategy 简单策略适合线性测试，确定服务的基本性能，验证有没有线程和资源锁问题。可以设置的参数为：测试持续时间/次数，线程数，测试延迟，随机延迟值。
+Variable Load Strategies 可变负载策略持续测试，更接近真实的服务流量变化,可以验证服务的稳定性发现潜在问题。
+Variance Strategy 可以指定区间时间内的压力变化差值。例如我们设置20个线程，间隔设置为60s，方差为0.8，线程数将在15s内从20增加到36，然后再减少到20. 45s后继续下降到4个线程，最后60s又回到初始值。
+Burst Strategy 可以设置峰值线程和峰值间隔和峰值持续时间来模拟突发流量情况。
+Thread Strategy 线程策略可以设置开始线程数和结束线程数。可以通过线程数的变化来确认服务可以承受的压力和出现错误的情况。长时间持续的测试可能发现隐藏的问题。
+以上策略是soapUI中的内置策略，在测试过程中可以参考以上策略来做测试。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hello-world-example.github.io/JMeter/docs/Basic/Cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Cli/</guid>
+      <description>JMeter Cli 非 gui 模式运行 $ ./bin/jmeter -n -t [jmx file] -l [results file] -e -o [Path to web report folder] 参数    参数 Mark       -h  使用帮助          -n ❤ 非 GUI 方式运行脚本    -t [jmx file] ❤ jmx 测试计划文件    -l [results file]  测试结果 jtl 文件    -p [conf.</description>
     </item>
     
     <item>

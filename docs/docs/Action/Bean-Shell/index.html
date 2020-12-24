@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bean Shell 内置变量 JMeter 在 BeanShell 中内置了变量，用户可以通过这些变量与 JMeter 进行交互，其中主要的变量及其使用方法如下:
+  log：写入信息到jmeber.log文件，使用方法：log.info(“This is log info!”);
+  ctx：该变量引用了当前线程的上下文，使用方法可参考：org.apache.jmeter.threads.JMeterContext。
+  vars - (JMeterVariables)：操作jmeter变量，这个变量实际引用了JMeter线程中的局部变量容器（本质上是Map），它是测试用例与BeanShell交互的桥梁，常用方法：
+ a) vars.get(String key)：从jmeter中获得变量值 b) vars.put(String key，String value)：数据存到jmeter变量中 参考：org.apache.jmeter.threads.JMeterVariables    props - (JMeterProperties - class java.util.Properties)：操作jmeter属性，该变量引用了JMeter的配置信息，可以获取Jmeter的属性，它的使用方法与vars类似，但是只能put进去String类型的值，而不能是一个对象。对应于java.util.Properties。
+ a) props.get(&ldquo;START.HMS&rdquo;);　注：START.HMS为属性名，在文件jmeter.properties中定义 b) props.put(&ldquo;PROP1&rdquo;,&ldquo;1234&rdquo;);    prev - (SampleResult)：获取前面的sample返回的信息，常用方法：
+ getResponseDataAsString()：获取响应信息 getResponseCode() ：获取响应code 参考：org.apache.jmeter.samplers.SampleResult    sampler - (Sampler)：gives access to the current sampler
+  Read More   Jmeter 之 Bean shell 使用  "><meta property="og:title" content="" />
+<meta property="og:description" content="Bean Shell 内置变量 JMeter 在 BeanShell 中内置了变量，用户可以通过这些变量与 JMeter 进行交互，其中主要的变量及其使用方法如下:
+  log：写入信息到jmeber.log文件，使用方法：log.info(“This is log info!”);
+  ctx：该变量引用了当前线程的上下文，使用方法可参考：org.apache.jmeter.threads.JMeterContext。
+  vars - (JMeterVariables)：操作jmeter变量，这个变量实际引用了JMeter线程中的局部变量容器（本质上是Map），它是测试用例与BeanShell交互的桥梁，常用方法：
+ a) vars.get(String key)：从jmeter中获得变量值 b) vars.put(String key，String value)：数据存到jmeter变量中 参考：org.apache.jmeter.threads.JMeterVariables    props - (JMeterProperties - class java.util.Properties)：操作jmeter属性，该变量引用了JMeter的配置信息，可以获取Jmeter的属性，它的使用方法与vars类似，但是只能put进去String类型的值，而不能是一个对象。对应于java.util.Properties。
+ a) props.get(&ldquo;START.HMS&rdquo;);　注：START.HMS为属性名，在文件jmeter.properties中定义 b) props.put(&ldquo;PROP1&rdquo;,&ldquo;1234&rdquo;);    prev - (SampleResult)：获取前面的sample返回的信息，常用方法：
+ getResponseDataAsString()：获取响应信息 getResponseCode() ：获取响应code 参考：org.apache.jmeter.samplers.SampleResult    sampler - (Sampler)：gives access to the current sampler
+  Read More   Jmeter 之 Bean shell 使用  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/" />
+
+<title>Bean Shell | JMeter</title>
+<link rel="icon" href="/JMeter/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/JMeter/book.min.d436f463c9471cfab26a8b71cd2f50b6abf5225806391453da4ca111d1834fef.css" integrity="sha256-1Db0Y8lHHPqyaotxzS9Qtqv1IlgGORRT2kyhEdGDT&#43;8=">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/JMeter"><span>JMeter</span>
+  </a>
+</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><strong>Basic</strong>
+<ul>
+<li>
+  <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Components/">JMeter 组件</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
+<li>
+  <a href="/JMeter/docs/Basic/Cli/">Cli</a></li>
+</ul>
+</li>
+<li>
+  <a href="/JMeter/docs/MeterSphere/"><strong>MeterSphere</strong>..</a>
+<ul>
+<li>
+  <a href="/JMeter/docs/MeterSphere/Install/">Docker 方式安装</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/JMeter/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Bean Shell</strong>
+
+  <label for="toc-control">
+    <img src="/JMeter/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bean-shell">Bean Shell</a>
+      <ul>
+        <li><a href="#内置变量">内置变量</a></li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="bean-shell">Bean Shell</h1>
+<h2 id="内置变量">内置变量</h2>
+<p>JMeter 在 BeanShell 中内置了变量，用户可以通过这些变量与 JMeter 进行交互，其中主要的变量及其使用方法如下:</p>
+<ul>
+<li>
+<p>log：写入信息到jmeber.log文件，使用方法：log.info(“This is log info!”);</p>
+</li>
+<li>
+<p>ctx：该变量引用了当前线程的上下文，使用方法可参考：org.apache.jmeter.threads.JMeterContext。</p>
+</li>
+<li>
+<p>vars - (JMeterVariables)：操作jmeter变量，这个变量实际引用了JMeter线程中的局部变量容器（本质上是Map），它是测试用例与BeanShell交互的桥梁，常用方法：</p>
+<ul>
+<li>a) vars.get(String key)：从jmeter中获得变量值</li>
+<li>b) vars.put(String key，String value)：数据存到jmeter变量中</li>
+<li>参考：<code>org.apache.jmeter.threads.JMeterVariables</code></li>
+</ul>
+</li>
+<li>
+<p>props - (JMeterProperties - class java.util.Properties)：操作jmeter属性，该变量引用了JMeter的配置信息，可以获取Jmeter的属性，它的使用方法与vars类似，但是只能put进去String类型的值，而不能是一个对象。对应于java.util.Properties。</p>
+<ul>
+<li>a) props.get(&ldquo;START.HMS&rdquo;);　　注：START.HMS为属性名，在文件jmeter.properties中定义</li>
+<li>b) props.put(&ldquo;PROP1&rdquo;,&ldquo;1234&rdquo;);</li>
+</ul>
+</li>
+<li>
+<p>prev - (SampleResult)：获取前面的sample返回的信息，常用方法：</p>
+<ul>
+<li>getResponseDataAsString()：获取响应信息</li>
+<li>getResponseCode() ：获取响应code</li>
+<li>参考：<code>org.apache.jmeter.samplers.SampleResult</code></li>
+</ul>
+</li>
+<li>
+<p>sampler - (Sampler)：gives access to the current sampler</p>
+</li>
+</ul>
+<h2 id="read-more">Read More</h2>
+<ul>
+<li>
+  <a href="https://www.cnblogs.com/puresoul/p/4915350.html">Jmeter 之 Bean shell 使用</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/edit/master/HuGo/content/docs/Action/Bean-Shell.md" target="_blank" rel="noopener">
+      <img src="/JMeter/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bean-shell">Bean Shell</a>
+      <ul>
+        <li><a href="#内置变量">内置变量</a></li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

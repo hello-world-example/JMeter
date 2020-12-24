@@ -8,6 +8,10 @@
   </url>
   
   <url>
+    <loc>https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/</loc>
+  </url>
+  
+  <url>
     <loc>https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/</loc>
     <lastmod>2020-12-23T19:59:04+08:00</lastmod>
   </url>
@@ -15,6 +19,10 @@
   <url>
     <loc>https://hello-world-example.github.io/JMeter/docs/Basic/Basic-Concepts/</loc>
     <lastmod>2020-12-23T19:59:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hello-world-example.github.io/JMeter/docs/Basic/Cli/</loc>
   </url>
   
   <url>
