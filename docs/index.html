@@ -57,9 +57,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Components/">__JMeter 组件</a></li>
+  <a href="/JMeter/docs/Basic/Components/">JMeter 组件</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Scope-And-Order/">__作用域和顺序</a></li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
 </ul>
 </li>
 <li>
@@ -155,9 +155,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/b34f13a76ed7ddc58be0da03b87f66ace1814884" title='Last modified by 杨凯彬 | Oct 12, 2020' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/42dd851f3182f1340ea1d32e48b1d19919a019e8" title='Last modified by kaibin.yang | Dec 23, 2020' target="_blank" rel="noopener">
       <img src="/JMeter/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Oct 12, 2020</span>
+      <span>Dec 23, 2020</span>
     </a>
   </div>
 
@@ -174,6 +174,18 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
       </footer>
 
       

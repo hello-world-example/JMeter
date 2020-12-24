@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="JMeter 组件 Read More   Component Reference   "><meta property="og:title" content="" />
-<meta property="og:description" content="JMeter 组件 Read More   Component Reference   " />
+<meta name="description" content="JMeter 组件  Read More   Component Reference   "><meta property="og:title" content="" />
+<meta property="og:description" content="JMeter 组件  Read More   Component Reference   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Basic/Components/" />
-
+<meta property="article:modified_time" content="2020-12-23T19:59:04+08:00" />
 <title>Components | JMeter</title>
 <link rel="icon" href="/JMeter/favicon.png" type="image/x-icon">
 
@@ -52,9 +52,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Components/"class=active>__JMeter 组件</a></li>
+  <a href="/JMeter/docs/Basic/Components/"class=active>JMeter 组件</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Scope-And-Order/">__作用域和顺序</a></li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
 </ul>
 </li>
 <li>
@@ -125,6 +125,8 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="jmeter-组件">JMeter 组件</h1>
+<p>
+  <img src="-images/JMeter-Component.png" alt="Components" /></p>
 <h2 id="read-more">Read More</h2>
 <ul>
 <li>
@@ -141,6 +143,14 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/42dd851f3182f1340ea1d32e48b1d19919a019e8" title='Last modified by kaibin.yang | Dec 23, 2020' target="_blank" rel="noopener">
+      <img src="/JMeter/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Dec 23, 2020</span>
+    </a>
+  </div>
+
 
 
   <div>
@@ -154,6 +164,18 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
       </footer>
 
       

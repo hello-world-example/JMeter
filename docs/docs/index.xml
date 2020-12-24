@@ -33,7 +33,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Components/</guid>
-      <description>JMeter 组件 Read More   Component Reference   </description>
+      <description>JMeter 组件  Read More   Component Reference   </description>
     </item>
     
     <item>
@@ -42,7 +42,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hello-world-example.github.io/JMeter/docs/Basic/Scope-And-Order/</guid>
-      <description>作用域和顺序 Read More   Jmeter常用组件及作用域  </description>
+      <description>作用域和顺序 作用域   变量和属性都是大小写敏感的
+  如果相同的变量由多个用户定义的变量，那么只有最后一个有效
+  一旦一个线程开始，每个线程的相关“用户定义的变量”将会初始化
+ 前置处理器中的”用户参数“ 或者 后置处理器中的“提取器”可能被用来重定义相同的变量，或者创建一个新的变量 这些重定义的变量只对当前的线程有效。    取样器(Sampler)：不与其他组件相互作用，无作用域问题
+  逻辑控制器：元件只对其子节点中的取样器和逻辑控制器起作用
+  如果组件是某个 Sampler 的子节点，则该元件只对其父子节点起作用
+  如果组件的父节点不是 Sampler，对其作用域是：该组件父节点下的其他所有后代节点
+  执行顺序  JMeter 测试计划树包含的元素，既是分层次的、又是有顺序的  层次： 配置元件、前置处理器，定时器、后置处理器、断言，监听器 顺序： 控制器、取样器   创建一个有序的请求列表，来呈现一个执行步骤的集合，这种场景通常都是用控制器来组织的，并且这些请求也是有顺序的 整体顺序： 配置元件 &amp;gt; 前置处理器 &amp;gt; 定时器 &amp;gt; Sampler &amp;gt; 后置处理器 &amp;gt; 断言 &amp;gt; 监听器 注意：有 Sampler 的时候，定时器、断言、前置/后置处理器才会被运行，逻辑控制器和sampler按他们在树中的顺序执行  Read More   3.9 Execution order  3.</description>
     </item>
     
   </channel>

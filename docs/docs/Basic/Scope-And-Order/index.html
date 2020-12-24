@@ -4,11 +4,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="作用域和顺序 Read More   Jmeter常用组件及作用域  "><meta property="og:title" content="" />
-<meta property="og:description" content="作用域和顺序 Read More   Jmeter常用组件及作用域  " />
+<meta name="description" content="作用域和顺序 作用域   变量和属性都是大小写敏感的
+  如果相同的变量由多个用户定义的变量，那么只有最后一个有效
+  一旦一个线程开始，每个线程的相关“用户定义的变量”将会初始化
+ 前置处理器中的”用户参数“ 或者 后置处理器中的“提取器”可能被用来重定义相同的变量，或者创建一个新的变量 这些重定义的变量只对当前的线程有效。    取样器(Sampler)：不与其他组件相互作用，无作用域问题
+  逻辑控制器：元件只对其子节点中的取样器和逻辑控制器起作用
+  如果组件是某个 Sampler 的子节点，则该元件只对其父子节点起作用
+  如果组件的父节点不是 Sampler，对其作用域是：该组件父节点下的其他所有后代节点
+  执行顺序  JMeter 测试计划树包含的元素，既是分层次的、又是有顺序的  层次： 配置元件、前置处理器，定时器、后置处理器、断言，监听器 顺序： 控制器、取样器   创建一个有序的请求列表，来呈现一个执行步骤的集合，这种场景通常都是用控制器来组织的，并且这些请求也是有顺序的 整体顺序： 配置元件 &gt; 前置处理器 &gt; 定时器 &gt; Sampler &gt; 后置处理器 &gt; 断言 &gt; 监听器 注意：有 Sampler 的时候，定时器、断言、前置/后置处理器才会被运行，逻辑控制器和sampler按他们在树中的顺序执行  Read More   3.9 Execution order  3."><meta property="og:title" content="" />
+<meta property="og:description" content="作用域和顺序 作用域   变量和属性都是大小写敏感的
+  如果相同的变量由多个用户定义的变量，那么只有最后一个有效
+  一旦一个线程开始，每个线程的相关“用户定义的变量”将会初始化
+ 前置处理器中的”用户参数“ 或者 后置处理器中的“提取器”可能被用来重定义相同的变量，或者创建一个新的变量 这些重定义的变量只对当前的线程有效。    取样器(Sampler)：不与其他组件相互作用，无作用域问题
+  逻辑控制器：元件只对其子节点中的取样器和逻辑控制器起作用
+  如果组件是某个 Sampler 的子节点，则该元件只对其父子节点起作用
+  如果组件的父节点不是 Sampler，对其作用域是：该组件父节点下的其他所有后代节点
+  执行顺序  JMeter 测试计划树包含的元素，既是分层次的、又是有顺序的  层次： 配置元件、前置处理器，定时器、后置处理器、断言，监听器 顺序： 控制器、取样器   创建一个有序的请求列表，来呈现一个执行步骤的集合，这种场景通常都是用控制器来组织的，并且这些请求也是有顺序的 整体顺序： 配置元件 &gt; 前置处理器 &gt; 定时器 &gt; Sampler &gt; 后置处理器 &gt; 断言 &gt; 监听器 注意：有 Sampler 的时候，定时器、断言、前置/后置处理器才会被运行，逻辑控制器和sampler按他们在树中的顺序执行  Read More   3.9 Execution order  3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Basic/Scope-And-Order/" />
-
+<meta property="article:modified_time" content="2020-12-23T19:59:04+08:00" />
 <title>Scope and Order | JMeter</title>
 <link rel="icon" href="/JMeter/favicon.png" type="image/x-icon">
 
@@ -52,9 +66,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Components/">__JMeter 组件</a></li>
+  <a href="/JMeter/docs/Basic/Components/">JMeter 组件</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Scope-And-Order/"class=active>__作用域和顺序</a></li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/"class=active>作用域和顺序</a></li>
 </ul>
 </li>
 <li>
@@ -110,6 +124,8 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#作用域和顺序">作用域和顺序</a>
       <ul>
+        <li><a href="#作用域">作用域</a></li>
+        <li><a href="#执行顺序">执行顺序</a></li>
         <li><a href="#read-more">Read More</a></li>
       </ul>
     </li>
@@ -125,10 +141,54 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="作用域和顺序">作用域和顺序</h1>
+<h2 id="作用域">作用域</h2>
+<ul>
+<li>
+<p>变量和属性都是<strong>大小写敏感</strong>的</p>
+</li>
+<li>
+<p>如果相同的变量由多个<strong>用户定义的变量</strong>，那么只有最后一个有效</p>
+</li>
+<li>
+<p>一旦一个线程开始，每个线程的相关“<strong>用户定义的变量</strong>”将会初始化</p>
+<ul>
+<li><em>前置处理器</em>中的”用户参数“ 或者 <em>后置处理器</em>中的“提取器”可能被用来重定义相同的变量，或者创建一个新的变量</li>
+<li>这些重定义的变量只对当前的线程有效。</li>
+</ul>
+</li>
+<li>
+<p><strong>取样器(Sampler)</strong>：不与其他组件相互作用，<strong>无作用域问题</strong></p>
+</li>
+<li>
+<p><strong>逻辑控制器</strong>：元件只对其子节点中的取样器和逻辑控制器起作用</p>
+</li>
+<li>
+<p>如果组件是某个 Sampler 的子节点，则该元件只对其父子节点起作用</p>
+</li>
+<li>
+<p>如果组件的父节点不是 Sampler，对其作用域是：该组件父节点下的其他所有后代节点</p>
+</li>
+</ul>
+<h2 id="执行顺序">执行顺序</h2>
+<ul>
+<li>JMeter 测试计划树包含的元素，既是分层次的、又是有顺序的
+<ul>
+<li><strong>层次：</strong> 配置元件、<strong>前置处理器</strong>，定时器、<strong>后置处理器</strong>、断言，监听器</li>
+<li><strong>顺序：</strong> 控制器、取样器</li>
+</ul>
+</li>
+<li>创建一个有序的请求列表，来呈现一个执行步骤的集合，这种场景通常都是用控制器来组织的，并且这些请求也是有顺序的</li>
+<li><strong>整体顺序：</strong> <strong>配置元件</strong> &gt; <u>前置处理器</u> &gt; <u>定时器</u> &gt; <strong>Sampler</strong>  &gt; <u>后置处理器</u> &gt; <u>断言</u> &gt; <strong>监听器</strong></li>
+<li>注意：有 Sampler 的时候，定时器、断言、前置/后置处理器才会被运行，逻辑控制器和sampler按他们在树中的顺序执行</li>
+</ul>
 <h2 id="read-more">Read More</h2>
 <ul>
 <li>
-  <a href="https://blog.csdn.net/yinshuilan/article/details/85065310">Jmeter常用组件及作用域</a></li>
+  <a href="https://jmeter.apache.org/usermanual/test_plan.html#executionorder">3.9 Execution order</a></li>
+<li>
+  <a href="https://jmeter.apache.org/usermanual/test_plan.html#scoping_rules">3.10 Scoping Rules</a></li>
+<li>
+  <a href="https://blog.csdn.net/yinshuilan/article/details/85065310">Jmeter 常用组件及作用域</a></li>
 </ul>
 </article>
  
@@ -139,6 +199,14 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/42dd851f3182f1340ea1d32e48b1d19919a019e8" title='Last modified by kaibin.yang | Dec 23, 2020' target="_blank" rel="noopener">
+      <img src="/JMeter/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Dec 23, 2020</span>
+    </a>
+  </div>
 
 
 
@@ -153,6 +221,18 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
       </footer>
 
       
@@ -173,6 +253,8 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#作用域和顺序">作用域和顺序</a>
       <ul>
+        <li><a href="#作用域">作用域</a></li>
+        <li><a href="#执行顺序">执行顺序</a></li>
         <li><a href="#read-more">Read More</a></li>
       </ul>
     </li>

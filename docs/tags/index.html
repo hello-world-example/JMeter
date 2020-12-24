@@ -53,9 +53,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/JMeter/docs/Basic/Basic-Concepts/">基础概念</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Components/">__JMeter 组件</a></li>
+  <a href="/JMeter/docs/Basic/Components/">JMeter 组件</a></li>
 <li>
-  <a href="/JMeter/docs/Basic/Scope-And-Order/">__作用域和顺序</a></li>
+  <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
 </ul>
 </li>
 <li>
@@ -159,6 +159,18 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
       </footer>
 
       

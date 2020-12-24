@@ -2,6 +2,8 @@
 
 
 
+![Components](-images/JMeter-Component.png)
+
 
 
 ## Read More

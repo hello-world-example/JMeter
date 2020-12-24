@@ -12,7 +12,8 @@
                     "id": "c800ivl3kfk0",
                     "created": 1608711192938,
                     "text": "_",
-                    "expandState": "expand"
+                    "expandState": "expand",
+                    "progress": 9
                 },
                 "children": [
                     {
@@ -40,25 +41,218 @@
                 "data": {
                     "id": "c801bpbrx140",
                     "created": 1608713451874,
-                    "text": "Config Element 自定义配置"
+                    "text": "Config Element 自定义配置",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
+                            "id": "c80ok4ifouw0",
+                            "created": 1608778997370,
+                            "text": "CSV Data Set Config",
+                            "progress": 9,
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80ok6z81o80",
+                                    "created": 1608779002739,
+                                    "text": "CSV 参数数据源，配置参数化",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c80omcxt0u80",
+                                    "created": 1608779172442,
+                                    "text": "CSV 文件定义的 列名 即 变量名，通过 ${变量名} 引用变量",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c80oo7glyl40",
+                                    "created": 1608779317247,
+                                    "text": "共享模式",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c80ooa6qaoo0",
+                                            "created": 1608779323180,
+                                            "text": "当前线程",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c80oog82d8w0",
+                                                    "created": 1608779336321,
+                                                    "text": "test${__threadNum}.csv",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c80ooj70ahs0",
+                                                    "created": 1608779342788,
+                                                    "text": "每个线程使用不用的文件",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
                             "id": "c804hkq7e680",
                             "created": 1608722375378,
-                            "text": "HTTP Header Manager"
+                            "text": "HTTP Header Manager",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c80536ms7cg0",
                                     "created": 1608724068708,
-                                    "text": "请求头管理"
+                                    "text": "请求头管理",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80ogypefoo0",
+                            "created": 1608778749638,
+                            "text": "HTTP Cookie Manager",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80ohgjqizs0",
+                                    "created": 1608778788478,
+                                    "text": "Cookie 管理",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80oh0ryxoo0",
+                            "created": 1608778754147,
+                            "text": "HTTP Cache Manager",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c80oh2im8fs0",
+                            "created": 1608778757935,
+                            "text": "HTTP Request Defaults",
+                            "progress": 9,
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80oj09f09k0",
+                                    "created": 1608778909754,
+                                    "text": "HTTP 默认请求",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c80oj88s35s0",
+                                    "created": 1608778927129,
+                                    "text": "如果 HTTP Request Sampler 没有定义，会默认使用 HTTP Request Defaults 中的配置",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c80ojm4bluo0",
+                                    "created": 1608778957335,
+                                    "text": "复用 HTTP Request Sampler",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80opgmxhfs0",
+                            "created": 1608779415584,
+                            "text": "Counter",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80oqamfd8w0",
+                                    "created": 1608779480857,
+                                    "text": "定义自增器",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c80oqqq75sw0",
+                                    "created": 1608779515914,
+                                    "text": "Exported Variable Name 定义变量名",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p0stvlnc0",
+                            "created": 1608780304131,
+                            "text": "User Defined Variables",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80p0ts5kcg0",
+                                    "created": 1608780306204,
+                                    "text": "自定义变量 ",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p37f9kaw0",
+                            "created": 1608780492628,
+                            "text": "...",
+                            "expandState": "expand"
+                        },
+                        "children": []
                     }
                 ]
             },
@@ -69,7 +263,8 @@
                     "text": "Thread Group 线程组(Users)",
                     "expandState": "expand",
                     "layout": null,
-                    "priority": 1
+                    "priority": null,
+                    "progress": 9
                 },
                 "children": [
                     {
@@ -89,14 +284,15 @@
                             "created": 1608713563947,
                             "text": "Thread Group..",
                             "expandState": "expand",
-                            "priority": 2
+                            "priority": null,
+                            "progress": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c800kf58yg00",
                                     "created": 1608711313880,
-                                    "text": "this",
+                                    "text": "_",
                                     "progress": 9,
                                     "expandState": "expand",
                                     "layout": null
@@ -225,10 +421,41 @@
                                     "id": "c804i0zairc0",
                                     "created": 1608722410756,
                                     "text": "Sub",
-                                    "expandState": "collapse",
-                                    "priority": 1
+                                    "expandState": "expand",
+                                    "priority": null,
+                                    "progress": null
                                 },
                                 "children": [
+                                    {
+                                        "data": {
+                                            "id": "c801bpbrx140",
+                                            "created": 1608713451874,
+                                            "text": "Config Element",
+                                            "expandState": "expand",
+                                            "priority": 1
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c801azcxn1k0",
+                                            "created": 1608713395348,
+                                            "text": "Pre Processors",
+                                            "expandState": "expand",
+                                            "priority": 2
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c801be03x9s0",
+                                            "created": 1608713427224,
+                                            "text": "Timer",
+                                            "expandState": "expand",
+                                            "priority": 3
+                                        },
+                                        "children": []
+                                    },
                                     {
                                         "data": {
                                             "id": "c8019cxfklk0",
@@ -236,7 +463,7 @@
                                             "text": "Samplers",
                                             "progress": 9,
                                             "expandState": "expand",
-                                            "priority": 1
+                                            "priority": 4
                                         },
                                         "children": [
                                             {
@@ -245,14 +472,16 @@
                                                     "created": 1608713319754,
                                                     "text": "HTTP Request",
                                                     "progress": 9,
-                                                    "priority": 1
+                                                    "priority": 1,
+                                                    "expandState": "expand"
                                                 },
                                                 "children": [
                                                     {
                                                         "data": {
                                                             "id": "c802tcjl6hc0",
                                                             "created": 1608717655714,
-                                                            "text": "this"
+                                                            "text": "this",
+                                                            "expandState": "expand"
                                                         },
                                                         "children": []
                                                     },
@@ -260,14 +489,16 @@
                                                         "data": {
                                                             "id": "c8042wlprc00",
                                                             "created": 1608721225765,
-                                                            "text": "Sub"
+                                                            "text": "Sub",
+                                                            "expandState": "expand"
                                                         },
                                                         "children": [
                                                             {
                                                                 "data": {
                                                                     "id": "c801azcxn1k0",
                                                                     "created": 1608713395348,
-                                                                    "text": "Pre Processors"
+                                                                    "text": "Pre Processors",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             },
@@ -275,7 +506,8 @@
                                                                 "data": {
                                                                     "id": "c801b5tkow80",
                                                                     "created": 1608713409415,
-                                                                    "text": "Post Processors"
+                                                                    "text": "Post Processors",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             },
@@ -283,7 +515,8 @@
                                                                 "data": {
                                                                     "id": "c801badzoo00",
                                                                     "created": 1608713419357,
-                                                                    "text": "Asserions"
+                                                                    "text": "Asserions",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             },
@@ -291,7 +524,8 @@
                                                                 "data": {
                                                                     "id": "c801be03x9s0",
                                                                     "created": 1608713427224,
-                                                                    "text": "Timer"
+                                                                    "text": "Timer",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             },
@@ -299,7 +533,8 @@
                                                                 "data": {
                                                                     "id": "c801bpbrx140",
                                                                     "created": 1608713451874,
-                                                                    "text": "Config Element"
+                                                                    "text": "Config Element",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             },
@@ -307,7 +542,8 @@
                                                                 "data": {
                                                                     "id": "c801bsbek800",
                                                                     "created": 1608713458382,
-                                                                    "text": "Listener"
+                                                                    "text": "Listener",
+                                                                    "expandState": "expand"
                                                                 },
                                                                 "children": []
                                                             }
@@ -319,7 +555,8 @@
                                                 "data": {
                                                     "id": "c801a3lgtmg0",
                                                     "created": 1608713326207,
-                                                    "text": "JDBC Request"
+                                                    "text": "JDBC Request",
+                                                    "expandState": "expand"
                                                 },
                                                 "children": []
                                             },
@@ -327,7 +564,8 @@
                                                 "data": {
                                                     "id": "c801a6l7h200",
                                                     "created": 1608713332722,
-                                                    "text": "JSR223 Sampler"
+                                                    "text": "JSR223 Sampler",
+                                                    "expandState": "expand"
                                                 },
                                                 "children": []
                                             },
@@ -336,14 +574,16 @@
                                                     "id": "c802snm7rcw0",
                                                     "created": 1608717601453,
                                                     "text": "Debug Sampler",
-                                                    "progress": 9
+                                                    "progress": 9,
+                                                    "expandState": "expand"
                                                 },
                                                 "children": [
                                                     {
                                                         "data": {
                                                             "id": "c802sq7du9s0",
                                                             "created": 1608717607086,
-                                                            "text": "结果中会输出“变量”的实际结果"
+                                                            "text": "结果中会输出“变量”的实际结果",
+                                                            "expandState": "expand"
                                                         },
                                                         "children": []
                                                     }
@@ -353,7 +593,8 @@
                                                 "data": {
                                                     "id": "c801bw5labc0",
                                                     "created": 1608713466738,
-                                                    "text": "..."
+                                                    "text": "...",
+                                                    "expandState": "expand"
                                                 },
                                                 "children": []
                                             }
@@ -361,50 +602,12 @@
                                     },
                                     {
                                         "data": {
-                                            "id": "c801bpbrx140",
-                                            "created": 1608713451874,
-                                            "text": "Config Element"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
                                             "id": "c801apg4uew0",
                                             "created": 1608713373774,
                                             "text": "Logic Controller",
-                                            "progress": 5
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "c801bsbek800",
-                                            "created": 1608713458382,
-                                            "text": "Listener"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "c801be03x9s0",
-                                            "created": 1608713427224,
-                                            "text": "Timer"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "c801badzoo00",
-                                            "created": 1608713419357,
-                                            "text": "Asserions"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "c801azcxn1k0",
-                                            "created": 1608713395348,
-                                            "text": "Pre Processors"
+                                            "progress": 1,
+                                            "expandState": "expand",
+                                            "priority": 4
                                         },
                                         "children": []
                                     },
@@ -412,7 +615,29 @@
                                         "data": {
                                             "id": "c801b5tkow80",
                                             "created": 1608713409415,
-                                            "text": "Post Processors"
+                                            "text": "Post Processors",
+                                            "expandState": "expand",
+                                            "priority": 5
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c801badzoo00",
+                                            "created": 1608713419357,
+                                            "text": "Asserions",
+                                            "expandState": "expand",
+                                            "priority": 6
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c801bsbek800",
+                                            "created": 1608713458382,
+                                            "text": "Listener",
+                                            "expandState": "expand",
+                                            "priority": 7
                                         },
                                         "children": []
                                     },
@@ -420,7 +645,8 @@
                                         "data": {
                                             "id": "c801bgx4n140",
                                             "created": 1608713433575,
-                                            "text": "Test Fragment"
+                                            "text": "Test Fragment",
+                                            "expandState": "expand"
                                         },
                                         "children": []
                                     }
@@ -446,7 +672,8 @@
                     "created": 1608713458382,
                     "text": "Listener",
                     "progress": 9,
-                    "priority": 1
+                    "priority": null,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
@@ -455,14 +682,16 @@
                             "created": 1608722085616,
                             "text": "View Results Tree",
                             "progress": 1,
-                            "priority": 1
+                            "priority": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804jiceegg0",
                                     "created": 1608722526918,
-                                    "text": "记录详细请求信息与结果"
+                                    "text": "记录详细请求信息与结果",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -470,7 +699,8 @@
                                 "data": {
                                     "id": "c804k7grb2w0",
                                     "created": 1608722581601,
-                                    "text": "显示断言执行结果"
+                                    "text": "显示断言执行结果",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -480,14 +710,16 @@
                         "data": {
                             "id": "c804eabm5n40",
                             "created": 1608722117635,
-                            "text": "Summary Report"
+                            "text": "Summary Report",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804oje6h3c0",
                                     "created": 1608722921023,
-                                    "text": "参考: Aggregate Report"
+                                    "text": "参考: Aggregate Report",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -499,14 +731,16 @@
                             "created": 1608722123147,
                             "text": "Aggregate Report",
                             "progress": 1,
-                            "priority": 1
+                            "priority": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804lnw7m000",
                                     "created": 1608722695728,
-                                    "text": "请求次数"
+                                    "text": "请求次数",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -514,7 +748,8 @@
                                 "data": {
                                     "id": "c804lrjczgo0",
                                     "created": 1608722703658,
-                                    "text": "Avg/Median/Min/Max 响应时间"
+                                    "text": "Avg/Median/Min/Max 响应时间",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -522,7 +757,8 @@
                                 "data": {
                                     "id": "c804n17kyuo0",
                                     "created": 1608722803078,
-                                    "text": "Error% 错误率"
+                                    "text": "Error% 错误率",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -530,7 +766,8 @@
                                 "data": {
                                     "id": "c804n5nmdmg0",
                                     "created": 1608722812755,
-                                    "text": "Throughput "
+                                    "text": "Throughput ",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -538,7 +775,8 @@
                                 "data": {
                                     "id": "c804nsujyqo0",
                                     "created": 1608722863240,
-                                    "text": "接收 / 发送 流量"
+                                    "text": "接收 / 发送 流量",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -549,14 +787,16 @@
                             "id": "c804fdwwbuo0",
                             "created": 1608722203817,
                             "text": "Backend Listener 测试结果输出他其他地方",
-                            "progress": 1
+                            "progress": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804g9po0uo0",
                                     "created": 1608722273037,
-                                    "text": "Graphite"
+                                    "text": "Graphite",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -564,7 +804,8 @@
                                 "data": {
                                     "id": "c804gqt5at40",
                                     "created": 1608722310252,
-                                    "text": "InfluxDb"
+                                    "text": "InfluxDb",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -572,7 +813,8 @@
                                 "data": {
                                     "id": "c804h0i9jx40",
                                     "created": 1608722331362,
-                                    "text": "..."
+                                    "text": "...",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -582,14 +824,16 @@
                         "data": {
                             "id": "c804u46u6xs0",
                             "created": 1608723358112,
-                            "text": "Response Time Graph"
+                            "text": "Response Time Graph",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804u5zrcew0",
                                     "created": 1608723362038,
-                                    "text": "图表的形式展示响应时间"
+                                    "text": "图表的形式展示响应时间",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -599,14 +843,16 @@
                         "data": {
                             "id": "c804pcfyo800",
                             "created": 1608722984258,
-                            "text": "Save Responses to a file"
+                            "text": "Save Responses to a file",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804wz750680",
                                     "created": 1608723582339,
-                                    "text": "响应信息输出到文件"
+                                    "text": "响应信息输出到文件",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -617,14 +863,16 @@
                             "id": "c804vxelvs80",
                             "created": 1608723500073,
                             "text": "Generate Summary Results",
-                            "progress": 1
+                            "progress": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804wlryzhc0",
                                     "created": 1608723553124,
-                                    "text": "同时在控制台打印结果"
+                                    "text": "同时在控制台打印结果",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -636,14 +884,17 @@
                 "data": {
                     "id": "c801azcxn1k0",
                     "created": 1608713395348,
-                    "text": "Pre Processors"
+                    "text": "Pre Processors",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
                             "id": "c803tebcwco0",
                             "created": 1608720480679,
-                            "text": "JSR223"
+                            "text": "JSR223",
+                            "expandState": "expand"
                         },
                         "children": []
                     },
@@ -651,7 +902,8 @@
                         "data": {
                             "id": "c803tj04qkg0",
                             "created": 1608720490885,
-                            "text": "User Parameters"
+                            "text": "User Parameters",
+                            "expandState": "expand"
                         },
                         "children": []
                     }
@@ -661,14 +913,17 @@
                 "data": {
                     "id": "c801b5tkow80",
                     "created": 1608713409415,
-                    "text": "Post Processors"
+                    "text": "Post Processors",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
                             "id": "c803ueyj7s00",
                             "created": 1608720560445,
-                            "text": "CSS Selector Extractor"
+                            "text": "CSS Selector Extractor",
+                            "expandState": "expand"
                         },
                         "children": []
                     },
@@ -677,14 +932,16 @@
                             "id": "c803uti9hc00",
                             "created": 1608720592113,
                             "text": "JSON Extractor 抽取器",
-                            "progress": 9
+                            "progress": 9,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c804d2f7p5c0",
                                     "created": 1608722022074,
-                                    "text": "抽取： $.result"
+                                    "text": "抽取： $.result",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -692,7 +949,8 @@
                                 "data": {
                                     "id": "c804d7sgvm80",
                                     "created": 1608722033760,
-                                    "text": "使用：${result}"
+                                    "text": "使用：${result}",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -702,7 +960,8 @@
                         "data": {
                             "id": "c803uznwbkg0",
                             "created": 1608720605514,
-                            "text": "Regular Expression Extractor"
+                            "text": "Regular Expression Extractor",
+                            "expandState": "expand"
                         },
                         "children": []
                     }
@@ -712,14 +971,93 @@
                 "data": {
                     "id": "c801be03x9s0",
                     "created": 1608713427224,
-                    "text": "Timer"
+                    "text": "Timer",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
-                            "id": "c8059fhhaoo0",
-                            "created": 1608724558163,
-                            "text": "https://blog.csdn.net/kongsuhongbaby/article/details/95591366"
+                            "id": "c80p6yhqcdc0",
+                            "created": 1608780786643,
+                            "text": "_",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80p8vjrft40",
+                                    "created": 1608780936963,
+                                    "text": "Think Time",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p5negpk80",
+                            "created": 1608780684136,
+                            "text": "Constant Timer",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80p7h2t4ls0",
+                                    "created": 1608780827099,
+                                    "text": "每个线程请求之前的等待时间",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p5ph5i140",
+                            "created": 1608780688652,
+                            "text": "Uniform Random Timer",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80p82khvko0",
+                                    "created": 1608780873881,
+                                    "text": "随机延迟",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p6a4pkpk0",
+                            "created": 1608780733613,
+                            "text": "Precise Throughput Timer",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c80p8o8kcn40",
+                                    "created": 1608780921049,
+                                    "text": "根据吞吐量在做计时器",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c80p65pvd3c0",
+                            "created": 1608780724008,
+                            "text": "Constant Throughput Timer",
+                            "expandState": "expand"
                         },
                         "children": []
                     }
@@ -729,21 +1067,25 @@
                 "data": {
                     "id": "c801badzoo00",
                     "created": 1608713419357,
-                    "text": "Assertions 断言"
+                    "text": "Assertions 断言",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
                             "id": "c8034azy2aw0",
                             "created": 1608718514355,
-                            "text": "_this"
+                            "text": "_this",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c8034dqttu80",
                                     "created": 1608718520334,
-                                    "text": "断言校验不通过，结果显示为失败"
+                                    "text": "断言校验不通过，结果显示为失败",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -753,14 +1095,16 @@
                         "data": {
                             "id": "c8030hml5080",
                             "created": 1608718215328,
-                            "text": "Response Assertion"
+                            "text": "Response Assertion",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c8035834fwg0",
                                     "created": 1608718586381,
-                                    "text": "响应体"
+                                    "text": "响应体",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -768,7 +1112,8 @@
                                 "data": {
                                     "id": "c8035c0m8xc0",
                                     "created": 1608718594937,
-                                    "text": "响应头"
+                                    "text": "响应头",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -776,7 +1121,8 @@
                                 "data": {
                                     "id": "c8035e12coo0",
                                     "created": 1608718599317,
-                                    "text": "..."
+                                    "text": "...",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -787,14 +1133,16 @@
                             "id": "c8030kt7fwo0",
                             "created": 1608718222259,
                             "text": "JSON Assertion",
-                            "progress": 9
+                            "progress": 9,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c8036kxlhtk0",
                                     "created": 1608718692709,
-                                    "text": "JsonPath 语法：https://github.com/json-path/JsonPath"
+                                    "text": "JsonPath 语法：https://github.com/json-path/JsonPath",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -802,14 +1150,16 @@
                                 "data": {
                                     "id": "c8037ltwz6w0",
                                     "created": 1608718773027,
-                                    "text": "Demo"
+                                    "text": "Demo",
+                                    "expandState": "expand"
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "c8037n4say80",
                                             "created": 1608718775861,
-                                            "text": "$.code"
+                                            "text": "$.code",
+                                            "expandState": "expand"
                                         },
                                         "children": []
                                     },
@@ -817,7 +1167,8 @@
                                         "data": {
                                             "id": "c8037n4say80",
                                             "created": 1608718775861,
-                                            "text": "$.result.requestHeaders.x-jmeter-header[0]"
+                                            "text": "$.result.requestHeaders.x-jmeter-header[0]",
+                                            "expandState": "expand"
                                         },
                                         "children": []
                                     }
@@ -829,14 +1180,16 @@
                         "data": {
                             "id": "c8030mhr4u80",
                             "created": 1608718225920,
-                            "text": "Size Assertion"
+                            "text": "Size Assertion",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c8039mtv9p40",
                                     "created": 1608718931930,
-                                    "text": "响应 字节大小"
+                                    "text": "响应 字节大小",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -846,14 +1199,16 @@
                         "data": {
                             "id": "c8030o9qjds0",
                             "created": 1608718229788,
-                            "text": "JSR223 Assertion"
+                            "text": "JSR223 Assertion",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c803akbj7mg0",
                                     "created": 1608719004832,
-                                    "text": "Groovy 校验"
+                                    "text": "Groovy 校验",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -861,7 +1216,8 @@
                                 "data": {
                                     "id": "c803apy4ecg0",
                                     "created": 1608719017081,
-                                    "text": "BeanShell 校验"
+                                    "text": "BeanShell 校验",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -871,7 +1227,8 @@
                         "data": {
                             "id": "c8030q1135c0",
                             "created": 1608718233616,
-                            "text": "XPath2 Assertion"
+                            "text": "XPath2 Assertion",
+                            "expandState": "expand"
                         },
                         "children": []
                     },
@@ -879,14 +1236,16 @@
                         "data": {
                             "id": "c80319kzigg0",
                             "created": 1608718276181,
-                            "text": "BeanShell Assertion"
+                            "text": "BeanShell Assertion",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c803p84dqa00",
                                     "created": 1608720153740,
-                                    "text": "https://jmeter.apache.org/usermanual/component_reference.html#BeanShell_Assertion"
+                                    "text": "https://jmeter.apache.org/usermanual/component_reference.html#BeanShell_Assertion",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -896,7 +1255,8 @@
                         "data": {
                             "id": "c8030vxe1yo0",
                             "created": 1608718246456,
-                            "text": "..."
+                            "text": "...",
+                            "expandState": "expand"
                         },
                         "children": []
                     }
@@ -906,14 +1266,17 @@
                 "data": {
                     "id": "c801bgx4n140",
                     "created": 1608713433575,
-                    "text": "Test Fragment 测试片段"
+                    "text": "Test Fragment 测试片段",
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
                             "id": "c802ethyjbs0",
                             "created": 1608716517158,
-                            "text": "测试片段，用于对 Thread Group 进行归类，默认是禁用"
+                            "text": "测试片段，用于对 Thread Group 进行归类，默认是禁用",
+                            "expandState": "expand"
                         },
                         "children": []
                     },
@@ -921,7 +1284,8 @@
                         "data": {
                             "id": "c802f3rrmaw0",
                             "created": 1608716539519,
-                            "text": "需要搭配 Logic Controller/Module Controller 使其生效"
+                            "text": "需要搭配 Logic Controller/Module Controller 使其生效",
+                            "expandState": "expand"
                         },
                         "children": []
                     }
@@ -932,7 +1296,8 @@
                     "id": "c801bgx4n140",
                     "created": 1608713433575,
                     "text": "Non-Test Elements",
-                    "progress": 1
+                    "progress": 9,
+                    "expandState": "expand"
                 },
                 "children": [
                     {
@@ -940,14 +1305,16 @@
                             "id": "c802gqj4zzk0",
                             "created": 1608716667428,
                             "text": "HTTP Mirror Server",
-                            "progress": 1
+                            "progress": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c802wfbwck80",
                                     "created": 1608717896871,
-                                    "text": "JMeter 自己启动一个服务器，响应 是 HTTP 请求信息"
+                                    "text": "JMeter 自己启动一个服务器，响应 是 HTTP 请求信息",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -958,14 +1325,16 @@
                             "id": "c802gzv4ll40",
                             "created": 1608716687743,
                             "text": "HTTP(S) Test Script Recorder",
-                            "progress": 9
+                            "progress": 9,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c802y9lek140",
                                     "created": 1608718041114,
-                                    "text": "【脚本录制工具】"
+                                    "text": "【脚本录制工具】",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
@@ -976,14 +1345,16 @@
                             "id": "c802h3gv85c0",
                             "created": 1608716695588,
                             "text": "Property Display",
-                            "progress": 1
+                            "progress": 1,
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "c802i81kans0",
                                     "created": 1608716783911,
-                                    "text": "展示 System 、 JMeter 属性"
+                                    "text": "展示 System 、 JMeter 属性",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             }
