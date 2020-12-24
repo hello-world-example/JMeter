@@ -6,7 +6,13 @@
 
     <groupId>JMeter</groupId>
     <artifactId>JMeter</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>demo-jmeter-docker</module>
+        <module>demo-jmeter-draw</module>
+        <module>demo-jmeter-jmx</module>
+    </modules>
 
 
     <properties>
