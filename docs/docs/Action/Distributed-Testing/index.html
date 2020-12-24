@@ -8,7 +8,7 @@
 <meta property="og:description" content="分布式测试 角色术语    术语 别名 简介     Controller Node Client JMeter GUI 用于给 Worker 节点发送指令   Worker Node Server 运行 jmeter-server 的机器，接收来自 Controller Node 的指令，压测 Target   Target  被压测的 Web 服务    启动 Worker 节点 # [-s] server 模式 $ ./bin/jmeter -s \ 	-Dserver_port=1099 \ 	-Dserver.rmi.ssl.disable=true \ 	-Djava.rmi.server.hostname=10.10.16.160 \ 	-j jmeter-server.log 配置 Controller 节点 # 修改 jmeter 属性，修改 remote_hosts 为启动 worker 节点 $ vim ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/" />
-<meta property="article:modified_time" content="2020-12-23T19:59:04+08:00" />
+<meta property="article:modified_time" content="2020-12-24T17:36:56+08:00" />
 <title>Distributed Testing | JMeter</title>
 <link rel="icon" href="/JMeter/favicon.png" type="image/x-icon">
 
@@ -277,9 +277,9 @@ $ jmeter -n -r -t meta-data.jmx -l log.jtl
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/42dd851f3182f1340ea1d32e48b1d19919a019e8" title='Last modified by kaibin.yang | Dec 23, 2020' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/hello-world-example/JMeter/commit/016a6e43269dde44a48a9062bdf20c5db0017963" title='Last modified by kaibin.yang | Dec 24, 2020' target="_blank" rel="noopener">
       <img src="/JMeter/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Dec 23, 2020</span>
+      <span>Dec 24, 2020</span>
     </a>
   </div>
 

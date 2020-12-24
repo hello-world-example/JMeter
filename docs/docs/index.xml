@@ -11,10 +11,10 @@
     
     <item>
       <title></title>
-      <link>https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/</link>
+      <link>https://hello-world-example.github.io/JMeter/docs/Action/__Bean-Shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/JMeter/docs/Action/Bean-Shell/</guid>
+      <guid>https://hello-world-example.github.io/JMeter/docs/Action/__Bean-Shell/</guid>
       <description>Bean Shell 内置变量 JMeter 在 BeanShell 中内置了变量，用户可以通过这些变量与 JMeter 进行交互，其中主要的变量及其使用方法如下:
   log：写入信息到jmeber.log文件，使用方法：log.info(“This is log info!”);
   ctx：该变量引用了当前线程的上下文，使用方法可参考：org.apache.jmeter.threads.JMeterContext。
