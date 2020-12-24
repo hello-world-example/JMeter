@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hello-world-example.github.io/JMeter/_sidebar/</guid>
-      <description> Basic   基础概念  JMeter 组件  作用域和顺序  Cli    MeterSphere..   Docker 方式安装    </description>
+      <description> Basic   基础概念  JMeter 组件  作用域和顺序  Cli   Action   分布式压测    MeterSphere..   Docker 方式安装    </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/</guid>
-      <description>分布式测试 Read More   25. Apache JMeter Distributed Testing Step-by-step  </description>
+      <description>分布式测试 角色术语    术语 别名 简介     Controller Node Client JMeter GUI 用于给 Worker 节点发送指令   Worker Node Server 运行 jmeter-server 的机器，接收来自 Controller Node 的指令，压测 Target   Target  被压测的 Web 服务    启动 Worker 节点 # [-s] server 模式 $ ./bin/jmeter -s \ 	-Dserver_port=1099 \ 	-Dserver.rmi.ssl.disable=true \ 	-Djava.rmi.server.hostname=10.10.16.160 \ 	-j jmeter-server.log 配置 Controller 节点 # 修改 jmeter 属性，修改 remote_hosts 为启动 worker 节点 $ vim .</description>
     </item>
     
     <item>

@@ -76,4 +76,4 @@ jmeter.bat(Windows)/jmeter.sh(Linux) -H [your.proxy.server] -P [your proxy serve
 
 - [1.4 Running JMeter](https://jmeter.apache.org/usermanual/get-started.html#running)
   - [1.4.4 CLI Mode (Command Line mode was called NON GUI mode)](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
-  - 
+  - [1.4.8 Full list of command-line options](https://jmeter.apache.org/usermanual/get-started.html#options)

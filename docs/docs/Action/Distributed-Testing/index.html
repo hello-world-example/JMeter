@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="分布式测试 Read More   25. Apache JMeter Distributed Testing Step-by-step  "><meta property="og:title" content="" />
-<meta property="og:description" content="分布式测试 Read More   25. Apache JMeter Distributed Testing Step-by-step  " />
+<meta name="description" content="分布式测试 角色术语    术语 别名 简介     Controller Node Client JMeter GUI 用于给 Worker 节点发送指令   Worker Node Server 运行 jmeter-server 的机器，接收来自 Controller Node 的指令，压测 Target   Target  被压测的 Web 服务    启动 Worker 节点 # [-s] server 模式 $ ./bin/jmeter -s \ 	-Dserver_port=1099 \ 	-Dserver.rmi.ssl.disable=true \ 	-Djava.rmi.server.hostname=10.10.16.160 \ 	-j jmeter-server.log 配置 Controller 节点 # 修改 jmeter 属性，修改 remote_hosts 为启动 worker 节点 $ vim ."><meta property="og:title" content="" />
+<meta property="og:description" content="分布式测试 角色术语    术语 别名 简介     Controller Node Client JMeter GUI 用于给 Worker 节点发送指令   Worker Node Server 运行 jmeter-server 的机器，接收来自 Controller Node 的指令，压测 Target   Target  被压测的 Web 服务    启动 Worker 节点 # [-s] server 模式 $ ./bin/jmeter -s \ 	-Dserver_port=1099 \ 	-Dserver.rmi.ssl.disable=true \ 	-Djava.rmi.server.hostname=10.10.16.160 \ 	-j jmeter-server.log 配置 Controller 节点 # 修改 jmeter 属性，修改 remote_hosts 为启动 worker 节点 $ vim ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/JMeter/docs/Action/Distributed-Testing/" />
 <meta property="article:modified_time" content="2020-12-23T19:59:04+08:00" />
@@ -57,6 +57,12 @@ https://github.com/alex-shpak/hugo-book
   <a href="/JMeter/docs/Basic/Scope-And-Order/">作用域和顺序</a></li>
 <li>
   <a href="/JMeter/docs/Basic/Cli/">Cli</a></li>
+</ul>
+</li>
+<li><strong>Action</strong>
+<ul>
+<li>
+  <a href="/JMeter/docs/Action/Distributed-Testing/"class=active>分布式压测</a></li>
 </ul>
 </li>
 <li>
@@ -112,6 +118,21 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#分布式测试">分布式测试</a>
       <ul>
+        <li><a href="#角色术语">角色术语</a></li>
+        <li><a href="#启动-worker-节点">启动 Worker 节点</a></li>
+        <li><a href="#配置-controller-节点">配置 Controller 节点</a>
+          <ul>
+            <li><a href="#non-gui-方式运行">non-GUI 方式运行</a></li>
+            <li><a href="#gui-方式运行">GUI 方式运行</a></li>
+          </ul>
+        </li>
+        <li><a href="#相关参数">相关参数</a></li>
+        <li><a href="#faq">FAQ</a>
+          <ul>
+            <li><a href="#cannot-start-localhost-is-a-loopback-address">Cannot start. localhost is a loopback address.</a></li>
+            <li><a href="#filenotfoundexception-rmi_keystorejks">FileNotFoundException: rmi_keystore.jks</a></li>
+          </ul>
+        </li>
         <li><a href="#read-more">Read More</a></li>
       </ul>
     </li>
@@ -127,10 +148,122 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="分布式测试">分布式测试</h1>
+<h2 id="角色术语">角色术语</h2>
+<p><img src="https://jmeter.apache.org/images/screenshots/distributed-names.svg" style="zoom: 50%;" /></p>
+<table>
+<thead>
+<tr>
+<th align="center">术语</th>
+<th>别名</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Controller Node</td>
+<td>Client</td>
+<td>JMeter GUI 用于给 Worker 节点发送指令</td>
+</tr>
+<tr>
+<td align="center">Worker Node</td>
+<td>Server</td>
+<td>运行 <strong>jmeter-server</strong> 的机器，接收来自 Controller Node 的指令，压测 Target</td>
+</tr>
+<tr>
+<td align="center">Target</td>
+<td></td>
+<td>被压测的 Web 服务</td>
+</tr>
+</tbody>
+</table>
+<h2 id="启动-worker-节点">启动 Worker 节点</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># [-s] server 模式</span>
+$ ./bin/jmeter -s <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	-Dserver_port<span style="color:#f92672">=</span><span style="color:#ae81ff">1099</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	-Dserver.rmi.ssl.disable<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	-Djava.rmi.server.hostname<span style="color:#f92672">=</span>10.10.16.160 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	-j jmeter-server.log
+</code></pre></div><h2 id="配置-controller-节点">配置 Controller 节点</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 修改 jmeter 属性，修改 remote_hosts 为启动 worker 节点</span>
+$ vim ./bin/jmeter.properties
+remote_hosts<span style="color:#f92672">=</span>10.10.16.160,10.10.16.161,10.10.16.162
+</code></pre></div><h3 id="non-gui-方式运行">non-GUI 方式运行</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 启动所有远程节点</span>
+$ jmeter -n -r -t meta-data.jmx -l log.jtl
+</code></pre></div><h3 id="gui-方式运行">GUI 方式运行</h3>
+<blockquote>
+<ul>
+<li>菜单 》 Run 》Remote Start All</li>
+<li>菜单 》 Run 》Remote Start 》 指定 Node</li>
+</ul>
+</blockquote>
+<h2 id="相关参数">相关参数</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>限制</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s, --server</code></td>
+<td></td>
+<td>以 Server 形式运行</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-r, --runremote</code></td>
+<td><code>non-GUI</code></td>
+<td>启动 <code>remote_hosts</code> 配置的所有远程 Server</td>
+</tr>
+<tr>
+<td><code>-R, --remotestart server1,…</code></td>
+<td><code>non-GUI</code></td>
+<td>启动指定的 Server，此时 <code>remote_hosts</code> 和 -r 都无效</td>
+</tr>
+<tr>
+<td><code>-X, --remoteexit</code></td>
+<td><code>non-GUI</code></td>
+<td>退出远程 Server</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-J, --jmeterproperty {argument}={value}</code></td>
+<td></td>
+<td>JMeter 本地属性，使用 <code>${__P(argument)}</code> 获取</td>
+</tr>
+<tr>
+<td><code>-G, --globalproperty (argument)[=(value)]</code></td>
+<td></td>
+<td>发送给 Server 的全局属性，开启了远程服务，需要用到 <code>-G</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="faq">FAQ</h2>
+<h3 id="cannot-start-localhost-is-a-loopback-address">Cannot start. localhost is a loopback address.</h3>
+<blockquote>
+<p>指定 <code>-Djava.rmi.server.hostname=10.10.16.160</code></p>
+</blockquote>
+<h3 id="filenotfoundexception-rmi_keystorejks">FileNotFoundException: rmi_keystore.jks</h3>
+<blockquote>
+<p>指定： <code>-Dserver.rmi.ssl.disable=true</code></p>
+</blockquote>
 <h2 id="read-more">Read More</h2>
 <ul>
 <li>
   <a href="https://jmeter.apache.org/usermanual/jmeter_distributed_testing_step_by_step.html">25. Apache JMeter Distributed Testing Step-by-step</a></li>
+<li>
+  <a href="https://www.cnblogs.com/mawenqiangios/p/8608890.html">JMeter 分布式集群</a></li>
 </ul>
 </article>
  
@@ -195,6 +328,21 @@ for(var i=0; i<images.length; i++){
   <ul>
     <li><a href="#分布式测试">分布式测试</a>
       <ul>
+        <li><a href="#角色术语">角色术语</a></li>
+        <li><a href="#启动-worker-节点">启动 Worker 节点</a></li>
+        <li><a href="#配置-controller-节点">配置 Controller 节点</a>
+          <ul>
+            <li><a href="#non-gui-方式运行">non-GUI 方式运行</a></li>
+            <li><a href="#gui-方式运行">GUI 方式运行</a></li>
+          </ul>
+        </li>
+        <li><a href="#相关参数">相关参数</a></li>
+        <li><a href="#faq">FAQ</a>
+          <ul>
+            <li><a href="#cannot-start-localhost-is-a-loopback-address">Cannot start. localhost is a loopback address.</a></li>
+            <li><a href="#filenotfoundexception-rmi_keystorejks">FileNotFoundException: rmi_keystore.jks</a></li>
+          </ul>
+        </li>
         <li><a href="#read-more">Read More</a></li>
       </ul>
     </li>
